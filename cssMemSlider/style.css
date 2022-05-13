@@ -17,7 +17,7 @@
 }
 
 .slider_container {
-    padding: 1.5rem 21vw;
+    padding: 1rem 22vw;
 }
 
 .slider {
@@ -52,7 +52,7 @@
 .navigation {
     display: flex;
     z-index: 999;
-    margin-top: 3rem;
+    align-items: center;
     right: 24%;
     background-color: white;
 }
@@ -101,6 +101,7 @@ input[name="r"] {
 .text_wrapper {
     overflow: hidden;
     width: 100%;
+    align-items: center;
 }
 
 .text_container {
@@ -179,10 +180,6 @@ input[name="r"] {
         flex-direction: row-reverse;
     }
 
-    .text_wrapper {
-        margin-top: 1rem;
-    }
-
     .bar {
         padding: 0.5rem;
     }
@@ -198,21 +195,12 @@ input[name="r"] {
         margin-top: 1rem;
     }
 
-    .text_wrapper {
-        margin-top: 0;
-    }
-
     .bar {
         padding: 0.2rem;
     }
-
-    .navigation {
-        margin-top: 0;
-        align-items: center;
-    }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 560px) and  (max-width: 767px) {
     .body {
         font-size: 1rem;
     }
@@ -222,11 +210,26 @@ input[name="r"] {
         align-items: center;
     }
 
-    .text_wrapper {
-        margin-top: 0;
+    .bar {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 559px) {
+    .label {
+        padding: 0.06rem;
+        height: 0.1rem;
+        width: 0.1rem;
+        border-radius: 50%;
+        border: 0.1rem solid black;
     }
 
-    .navigation {
+    .body {
+    font-size: 0.5rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: column;
         align-items: center;
     }
 
