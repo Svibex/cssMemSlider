@@ -8,7 +8,6 @@
 .body {
     background: url("./img/background.jpg") repeat;
     font-family: Lack, sans-serif;
-    font-size: 1.5rem;
 }
 
 .wrapper {
@@ -46,6 +45,10 @@
     width: 50vw;
 }
 
+.menu_wrapper {
+    display: flex;
+}
+
 .navigation {
     display: flex;
     z-index: 999;
@@ -56,7 +59,6 @@
 
 .bar {
     display: block;
-    padding: 0.5rem;
     cursor: pointer;
     transition: all .4s ease-in-out;
 }
@@ -97,7 +99,6 @@ input[name="r"] {
 }
 
 .text_wrapper {
-    margin-top: 2rem;
     overflow: hidden;
     width: 100%;
 }
@@ -169,17 +170,67 @@ input[name="r"] {
     right: -600%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1344px) {
+    .body {
+        font-size: 2rem;
+    }
+
     .menu_wrapper {
-        display: flex;
         flex-direction: row-reverse;
+    }
+
+    .text_wrapper {
+        margin-top: 1rem;
+    }
+
+    .bar {
+        padding: 0.5rem;
     }
 }
 
-/*@media (max-width: 767px) {*/
-/*    .menu_wrapper {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*    }*/
-/*}*/
+@media (min-width: 768px) and (max-width: 1344px) {
+    .body {
+        font-size: 1rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: row-reverse;
+        margin-top: 1rem;
+    }
+
+    .text_wrapper {
+        margin-top: 0;
+    }
+
+    .bar {
+        padding: 0.2rem;
+    }
+
+    .navigation {
+        margin-top: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        font-size: 1rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text_wrapper {
+        margin-top: 0;
+    }
+
+    .navigation {
+        align-items: center;
+    }
+
+    .bar {
+        padding: 0.5rem;
+    }
+}
