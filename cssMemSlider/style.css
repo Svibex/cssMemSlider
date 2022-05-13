@@ -24,7 +24,6 @@
 .slider {
     width: 50vw;
     background: white;
-    border: 20px solid white;
 }
 
 .img_wrapper {
@@ -48,7 +47,6 @@
 }
 
 .navigation {
-    position: absolute;
     display: flex;
     z-index: 999;
     margin-top: 3rem;
@@ -83,12 +81,13 @@
     border: 0.2rem solid #c2e2b3;
 }
 
-#r1:checked ~ .navigation [for="r1"] .label,
-#r2:checked ~ .navigation [for="r2"] .label,
-#r3:checked ~ .navigation [for="r3"] .label,
-#r4:checked ~ .navigation [for="r4"] .label,
-#r5:checked ~ .navigation [for="r5"] .label,
-#r6:checked ~ .navigation [for="r6"] .label {
+#r1:checked ~ .menu_wrapper .navigation [for="r1"] .label,
+#r2:checked ~ .menu_wrapper .navigation [for="r2"] .label,
+#r3:checked ~ .menu_wrapper .navigation [for="r3"] .label,
+#r4:checked ~ .menu_wrapper .navigation [for="r4"] .label,
+#r5:checked ~ .menu_wrapper .navigation [for="r5"] .label,
+#r6:checked ~ .menu_wrapper .navigation [for="r6"] .label,
+#r7:checked ~ .menu_wrapper .navigation [for="r7"] .label {
    background-color: transparent;
 }
 
@@ -111,7 +110,7 @@ input[name="r"] {
 }
 
 .text {
-    min-width: 50vw;
+    min-width: 100%;
 }
 
 #r1:checked ~ .img_wrapper .img_container {
@@ -138,26 +137,49 @@ input[name="r"] {
     margin-left: -500%;
 }
 
-#r1:checked ~ .text_wrapper .text_container {
-    right: 0%;
+#r7:checked ~ .img_wrapper .img_container {
+    margin-left: -600%;
 }
 
-#r2:checked ~ .text_wrapper .text_container {
+#r1:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: 0;
+}
+
+#r2:checked ~ .menu_wrapper .text_wrapper .text_container {
     right: -100%;
 }
 
-#r3:checked ~ .text_wrapper .text_container {
+#r3:checked ~ .menu_wrapper .text_wrapper .text_container {
     right: -200%;
 }
 
-#r4:checked ~ .text_wrapper .text_container {
+#r4:checked ~ .menu_wrapper .text_wrapper .text_container {
     right: -300%;
 }
 
-#r5:checked ~ .text_wrapper .text_container {
+#r5:checked ~ .menu_wrapper .text_wrapper .text_container {
     right: -400%;
 }
 
-#r6:checked ~ .text_wrapper .text_container {
+#r6:checked ~ .menu_wrapper .text_wrapper .text_container {
     right: -500%;
 }
+
+#r7:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -600%;
+}
+
+@media (min-width: 768px) {
+    .menu_wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+/*@media (max-width: 767px) {*/
+/*    .menu_wrapper {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+/*}*/
