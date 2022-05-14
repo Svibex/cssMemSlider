@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "Lack";
+    src: url("Lack-Regular.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+.body {
+    background: url("./img/background.jpg") repeat;
+    font-family: Lack, sans-serif;
+}
+
+.wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+.slider_container {
+    padding: 1rem 21vw;
+}
+
+.slider {
+    width: 50vw;
+    background: white;
+    border: 1rem solid white;
+}
+
+.img_wrapper {
+    overflow: hidden;
+    left: 50%;
+}
+
+.img_container {
+    display: flex;
+    transition: all .6s ease;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide img {
+    width: 50vw;
+    border-radius: 1rem;
+}
+
+.menu_wrapper {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    z-index: 999;
+    align-items: center;
+    right: 24%;
+}
+
+.bar {
+    display: block;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.label {
+    display: inline-block;
+    padding: 0.5rem;
+    height: 0.1rem;
+    width: 0.1rem;
+    border-radius: 50%;
+    background-color: black;
+    border: 0.2rem solid black;
+}
+
+.label:active {
+    transform: scale(1.1);
+}
+
+.bar:hover .label {
+    opacity: 1;
+    background-color: #c2e2b3;
+    border: 0.2rem solid #c2e2b3;
+}
+
+#r1:checked ~ .menu_wrapper .navigation [for="r1"] .label,
+#r2:checked ~ .menu_wrapper .navigation [for="r2"] .label,
+#r3:checked ~ .menu_wrapper .navigation [for="r3"] .label,
+#r4:checked ~ .menu_wrapper .navigation [for="r4"] .label,
+#r5:checked ~ .menu_wrapper .navigation [for="r5"] .label,
+#r6:checked ~ .menu_wrapper .navigation [for="r6"] .label,
+#r7:checked ~ .menu_wrapper .navigation [for="r7"] .label {
+   background-color: transparent;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.text_wrapper {
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: row-reverse;
+    transition: all .6s ease;
+    position: relative;
+}
+
+.text {
+    min-width: 100%;
+}
+
+#r1:checked ~ .img_wrapper .img_container {
+    margin-left: 0;
+}
+
+#r2:checked ~ .img_wrapper .img_container {
+    margin-left: -100%;
+}
+
+#r3:checked ~ .img_wrapper .img_container {
+    margin-left: -200%;
+}
+
+#r4:checked ~ .img_wrapper .img_container {
+    margin-left: -300%;
+}
+
+#r5:checked ~ .img_wrapper .img_container {
+    margin-left: -400%;
+}
+
+#r6:checked ~ .img_wrapper .img_container {
+    margin-left: -500%;
+}
+
+#r7:checked ~ .img_wrapper .img_container {
+    margin-left: -600%;
+}
+
+#r1:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: 0;
+}
+
+#r2:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -100%;
+}
+
+#r3:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -200%;
+}
+
+#r4:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -300%;
+}
+
+#r5:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -400%;
+}
+
+#r6:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -500%;
+}
+
+#r7:checked ~ .menu_wrapper .text_wrapper .text_container {
+    right: -600%;
+}
+
+@media (min-width: 1344px) {
+    .body {
+        font-size: 1.5rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: row-reverse;
+    }
+
+    .bar {
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1344px) {
+    .body {
+        font-size: 1rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: row-reverse;
+        margin-top: 1rem;
+    }
+
+    .bar {
+        padding: 0.2rem;
+    }
+}
+
+@media (min-width: 560px) and  (max-width: 767px) {
+    .body {
+        font-size: 1rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .bar {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 559px) {
+    .label {
+        padding: 0.06rem;
+        height: 1vw;
+        width: 1vw;
+        border-radius: 50%;
+        border: 0.1rem solid black;
+    }
+
+    .body {
+        font-size: 0.5rem;
+    }
+
+    .menu_wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .bar {
+        padding: 0.5rem;
+    }
+}
