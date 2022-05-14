@@ -11,18 +11,18 @@
 }
 
 .wrapper {
-    background: rgba(255,255,255,0.8);
     width: 95%;
     margin: auto;
 }
 
 .slider_container {
-    padding: 1rem 22vw;
+    padding: 1rem 21vw;
 }
 
 .slider {
     width: 50vw;
     background: white;
+    border: 1rem solid white;
 }
 
 .img_wrapper {
@@ -43,6 +43,7 @@
 
 .slide img {
     width: 50vw;
+    border-radius: 1rem;
 }
 
 .menu_wrapper {
@@ -54,7 +55,6 @@
     z-index: 999;
     align-items: center;
     right: 24%;
-    background-color: white;
 }
 
 .bar {
@@ -173,7 +173,7 @@ input[name="r"] {
 
 @media (min-width: 1344px) {
     .body {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .menu_wrapper {
@@ -208,6 +208,7 @@ input[name="r"] {
     .menu_wrapper {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .bar {
@@ -218,19 +219,20 @@ input[name="r"] {
 @media (max-width: 559px) {
     .label {
         padding: 0.06rem;
-        height: 0.1rem;
-        width: 0.1rem;
+        height: 1vw;
+        width: 1vw;
         border-radius: 50%;
         border: 0.1rem solid black;
     }
 
     .body {
-    font-size: 0.5rem;
+        font-size: 0.5rem;
     }
 
     .menu_wrapper {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .bar {
